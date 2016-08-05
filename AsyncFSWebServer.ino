@@ -13,9 +13,6 @@
 #define DEBUG
 #define DEBUG_DYNAMICDATA
 
-const char * ssid = "Virus_Detected!!!";
-const char * password = "LaJunglaSigloXX1@.";
-
 AsyncWebServer server(80);
 
 void send_connection_state_values_html(AsyncWebServerRequest * request)
