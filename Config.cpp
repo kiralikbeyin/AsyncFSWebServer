@@ -170,26 +170,22 @@ boolean load_config() {
 	//String(ssid_str).toCharArray(config.ssid, 28);
 
 	config.password = json["pass"].asString();
+
+	config.IP[0] = json["ip"]["0"];
+	config.IP[1] = json["ip"]["1"];
+	config.IP[2] = json["ip"]["2"];
+	config.IP[3] = json["ip"]["3"];
 	
-	config.IP[0] = json["ip"][0];
-	config.IP[1] = json["ip"][1];
-	config.IP[2] = json["ip"][2];
-	config.IP[3] = json["ip"][3];
+	config.Netmask[0] = json["netmask"]["0"];
+	config.Netmask[1] = json["netmask"]["1"];
+	config.Netmask[2] = json["netmask"]["2"];
+	config.Netmask[3] = json["netmask"]["3"];
+	
+	config.Gateway[0] = json["gateway"]["0"];
+	config.Gateway[1] = json["gateway"]["1"];
+	config.Gateway[2] = json["gateway"]["2"];
+	config.Gateway[3] = json["gateway"]["3"];
 
-	config.Netmask[0] = json["netmask"][0];
-	config.Netmask[1] = json["netmask"][1];
-	config.Netmask[2] = json["netmask"][2];
-	config.Netmask[3] = json["netmask"][3];
-
-	config.Gateway[0] = json["gateway"][0];
-	config.Gateway[1] = json["gateway"][1];
-	config.Gateway[2] = json["gateway"][2];
-	config.Gateway[3] = json["gateway"][3];
-
-	config.DNS[0] = json["dns"][0];
-	config.DNS[1] = json["dns"][1];
-	config.DNS[2] = json["dns"][2];
-	config.DNS[3] = json["dns"][3];
 
 	config.dhcp = json["dhcp"];
 
